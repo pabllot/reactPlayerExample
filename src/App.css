@@ -7,14 +7,75 @@ body {
 }
 
 .video-container {
+  position: relative;
   margin-top: 20px;
   width: 90%;
   max-width: 1000px;
   display: flex;
   justify-content: center;
   margin-inline: auto;
+  background-color: black;
+}
+
+.video-container.theater, 
+.video-container.full-screen {
+  max-width: initial;
+  width: 100%;
+}
+
+.video-container.video-container.theater {
+  max-height: 82vh;
+}
+
+.video-container.full-screen {
+  max-height: 100vh;
 }
 
 video {
   width: 100%;
 }
+
+.video-controls-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.video-container:hover .video-controls-container,
+.video-container:focus-within .video-controls-container,
+.video-container.paused .video-controls-container {
+  opacity: 1;
+}
+
+.video-controls-container .controls {
+  display: flex;
+  gap: .5rem;
+  padding: .25rem;
+  align-items: center;
+}
+
+.video-controls-container .controls button,
+.video-controls-container .controls svg
+ {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: .9;
+  transition: opacity 150ms ease-in-out;
+}
+
+.video-controls-container .controls button:hover,
+.video-controls-container .controls svg:hover {
+  opacity: 1;
+}
+
