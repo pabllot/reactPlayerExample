@@ -1,12 +1,17 @@
 import React from 'react'
 import { Container } from './styles';
-
+import bunny from '../../assets/bunny.png'
 
 const SelectVideo = () => {
   return (
     <Container>
-        <div className='left'></div>
-        <div className='right'></div>
+        <img src={bunny} className='left'/>
+        <div className='right'>
+          <h3>Titulo de duas linha pelo menos</h3>
+          <p>Nome autor</p>
+          <p>NUm visualizações</p>
+          <p>novo</p>
+        </div>
     </Container>
   )
 }

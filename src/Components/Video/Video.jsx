@@ -6,9 +6,8 @@ import penaltis from '../../assets/penaltis.mp4'
 import { IoMdPlay, IoMdPause, MdVolumeOff, BiFullscreen, BiExitFullscreen, CgScreenWide, CgScreen, GoUnmute} from '../../assets/reactIconsImport';
 import { Container } from './styles';
 
-const Video = () => {
+const Video = ({isTheaterMode, setIsTheaterMode}) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true)
-  const [isTheaterMode, setIsTheaterMode] = useState(false)
   const [isFullScreen, setIsFullScreen] = useState(true)
   const [isMute, setIsMute] = useState(true)
   const [duration, setDuration] = useState(null)
@@ -104,7 +103,7 @@ const Video = () => {
           </div>
         </div>
         <video ref={vidRef} onTimeUpdate={()=>setCurrentTime(formatDuration(vidRef?.current?.currentTime))} onLoadedMetadata={()=>setDuration(formatDuration(vidRef?.current?.duration))} 
-        src={penaltis} loop type='video/mp4'></video>
+        src={bunny} loop type='video/mp4'></video>
       </div>
     </Container>
   )

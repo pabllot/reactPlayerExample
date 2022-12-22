@@ -7,8 +7,8 @@ export const Container = styled.div`
 
 .video-container {
   position: relative;
-  width: 700px;
-  height: 400px;
+  width: 850px;
+  height: 500px;
   display: flex;
   justify-content: center;
   margin-inline: auto;
