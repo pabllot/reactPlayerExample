@@ -1,13 +1,24 @@
 { 
         "vids": [
-    {"id": 1, "name": "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/bunny.png"},
-    {"id": 2, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png"},
-    {"id": 3, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/neymar1.png"},
-    {"id": 4, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png"},
-    {"id": 5, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/neymar1.png"},
-    {"id": 6, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png"},
-    {"id": 7, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/neymar1.png"},
-    {"id": 8, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png"},
-    {"id": 9, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png"}
+    {"id": 1, "name": "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/kids1.png", "gender": "kids"},
+    {"id": 2, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/kids2.png", "gender": "kids"},
+    {"id": 3, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/kids3.png", "gender": "kids"},
+    {"id": 4, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/kids4.png", "gender": "kids"},
+    {"id": 5, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/kids5.png", "gender": "kids"},
+    {"id": 6, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "cats"},
+    {"id": 7, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/neymar1.png", "gender": "cats"},
+    {"id": 8, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "cats"},
+    {"id": 9, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "cats"},
+    {"id": 10, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "cats"},
+    {"id": 11, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "dogs"},
+    {"id": 12, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "dogs"},
+    {"id": 13, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "dogs"},
+    {"id": 14, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "dogs"},
+    {"id": 15, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "dogs"},
+    {"id": 16, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "soccer"},
+    {"id": 17, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "soccer"},
+    {"id": 18, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "soccer"},
+    {"id": 19, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "soccer"},
+    {"id": 20, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png", "gender": "soccer"}
   ]
 }

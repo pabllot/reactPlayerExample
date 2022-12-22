@@ -19,6 +19,7 @@ height: 500px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-color: #64626239;
 }
 
 button {
