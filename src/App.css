@@ -44,6 +44,7 @@ video {
   z-index: 100;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
+  background-color: rgba(38, 37, 37, 0.438);
 }
 
 .video-container:hover .video-controls-container,
@@ -94,5 +95,12 @@ video {
 .volume-container:hover .volume-slider{
   width: 100px;
   transform: scaleX(1);
+}
+
+.duration-container {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  flex-grow: 1;
 }
 

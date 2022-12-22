@@ -8,24 +8,23 @@ function App() {
   const [isTheaterMode, setIsTheaterMode] = useState(false)
   const [isFullScreen, setIsFullScreen] = useState(true)
   const [isMute, setIsMute] = useState(true)
-  const [volume, setVolume] = useState(1)
+  const [duration, setDuration] = useState(1)
 
 
   const vidRef = useRef(null)
   const fullScreenRef = useRef(null)
   const volumeRef = useRef(null)
 
-   const toggleMute = () => {
+  const toggleTheaterMode = () =>  setIsTheaterMode(prev => !prev);
+
+  const toggleMute = () => {
     setIsMute(prev => !prev)
-    isMute ? vidRef.current.volume = 0 : vidRef.current.volume = 1
+    isMute ? vidRef.current.volume = 0 : vidRef.current.volume = 1;
+    isMute ? volumeRef.current.value = 0 : volumeRef.current.value = 1
     }
 
- const toggleTheaterMode = () => {
-    setIsTheaterMode(prev => !prev)
-    }
 
  const toggleFullScreen = () => {
-
     setIsFullScreen(prev => !prev)    
     if (!isFullScreen)document.exitFullscreen()
     else fullScreenRef.current.requestFullscreen()
@@ -36,20 +35,29 @@ function App() {
     setIsVideoPaused(prev => !prev)
     }
 
- const volumeChange = () => {
-    vidRef.current.volume = 100
-  }
-
- const  handleInput= (e)=>{
-    if(e.target.value < 0.02) vidRef.current.volume = 0;
-    else if(e.target.value > 0 && e.target.value < 0.6) vidRef.current.volume = 0.5
+ // ajustar volume de acordo com a barrinha
+ const  handleRange= (e)=>{
+    if(e.target.value < 0.02) vidRef.current.volume = 0, setIsMute(false);
+    else if(e.target.value > 0 && e.target.value < 0.6) vidRef.current.volume = 0.4, setIsMute(true)
     else vidRef.current.volume = 1
-  }
+    }
+
+
+  // Se os segundos começarem com zero exemplo 01:03. Isso ajeita, senao fica 01:3.
+  const startWithZero = new Intl.NumberFormat(undefined, {
+    minimumIntegerDigits: 2,
+    })
+
+  // formatando a duração de vídeo, pq recebe milisegundos e nao em formato de hora 
+  const formatDuration = (time) => {
+    const seconds = Math.floor(time % 60)
+    const minutes = Math.floor(time / 60) % 60
+    const hours = Math.floor(time / 3600)
+    if (hours === 0) {
+      return `${minutes}:${startWithZero.format(seconds)}`
+      }
+   }
   
-  useEffect(()=>{
-    
-    console.log(volume)
-  },[volume])
 
   return (
     <div  className="App">
@@ -58,15 +66,22 @@ function App() {
           <div className="timeline-container"></div>
           <div className="controls">
             <button onClick={togglePlay}>{!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}</button>
+
             <div className='volume-container'>
               <button onClick={toggleMute}>{isMute ? <GoUnmute /> : <MdVolumeOff />}</button>
-              <input ref={volumeRef} onInput={(e) => handleInput(e)} className='volume-slider' type='range' min='0' max='1' step='any' defaultValue='1'></input>
+              <input ref={volumeRef} onInput={(e) => handleRange(e)} className='volume-slider' type='range' min='0' max='1' step='any' defaultValue='1'></input>
             </div>
+
+            <div className='duration-container'>
+              <div className='current-time'>0:00</div>/
+              <div className='total-time'>{duration}</div>
+            </div>
+
             <button onClick={toggleTheaterMode}>{isTheaterMode ? <CgScreenWide/> : <CgScreen />}</button>
             <button onClick={toggleFullScreen}>{ isFullScreen ? <BiFullscreen /> : <BiExitFullscreen/>}</button>
           </div>
         </div>
-        <video ref={vidRef} onVolumeChange={(e) => setVolume(e.target.value)} src={video} loop type='video/mp4'></video>
+        <video ref={vidRef} onLoadedMetadata={()=>setDuration(formatDuration(vidRef?.current?.duration))} src={video} loop type='video/mp4'></video>
       </div>
     </div>
   )
