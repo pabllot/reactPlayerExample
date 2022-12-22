@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container } from './styles';
-import bunny from '../../assets/bunny.png'
 
 const SelectVideo = ({name, author, views, img}) => {
   return (
