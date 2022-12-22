@@ -8,7 +8,8 @@ function App() {
   const [isTheaterMode, setIsTheaterMode] = useState(false)
   const [isFullScreen, setIsFullScreen] = useState(true)
   const [isMute, setIsMute] = useState(true)
-  const [duration, setDuration] = useState(1)
+  const [duration, setDuration] = useState(null)
+  const [currentTime, setCurrentTime] = useState('0:00')
 
 
   const vidRef = useRef(null)
@@ -55,6 +56,8 @@ function App() {
     const hours = Math.floor(time / 3600)
     if (hours === 0) {
       return `${minutes}:${startWithZero.format(seconds)}`
+      } else {
+        return `${hours}:${startWithZero.format(minutes)}:${startWithZero.format(seconds)}`
       }
    }
   
@@ -73,7 +76,7 @@ function App() {
             </div>
 
             <div className='duration-container'>
-              <div className='current-time'>0:00</div>/
+              <div className='current-time'>{currentTime}</div>/
               <div className='total-time'>{duration}</div>
             </div>
 
@@ -81,7 +84,7 @@ function App() {
             <button onClick={toggleFullScreen}>{ isFullScreen ? <BiFullscreen /> : <BiExitFullscreen/>}</button>
           </div>
         </div>
-        <video ref={vidRef} onLoadedMetadata={()=>setDuration(formatDuration(vidRef?.current?.duration))} src={video} loop type='video/mp4'></video>
+        <video ref={vidRef} onTimeUpdate={()=>setCurrentTime(formatDuration(vidRef?.current?.currentTime))} onLoadedMetadata={()=>setDuration(formatDuration(vidRef?.current?.duration))} src={video} loop type='video/mp4'></video>
       </div>
     </div>
   )
