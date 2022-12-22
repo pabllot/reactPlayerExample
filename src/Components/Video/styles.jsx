@@ -119,5 +119,21 @@ video {
   position: absolute;
   z-index: 999;
   bottom: 38px;
-  left: 0;
-}`
+  left: 0;}
+  @media (max-width: 768px) {
+    .video-container {
+  width: 480px;
+  height: 300px;
+
+}
+
+  }
+  @media (max-width: 420px) {
+    .video-container {
+  width: 340px;
+  height: 200px;
+
+}
+
+  }
+`
