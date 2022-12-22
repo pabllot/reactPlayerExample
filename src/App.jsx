@@ -11,7 +11,6 @@ const App = () => {
   return (
     <div className='big-wrapper'>
         <Video isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} />
-        {!isTheaterMode && <Sidebar /> }
     </div>
   )
 }
