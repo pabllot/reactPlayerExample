@@ -2,14 +2,15 @@ import React from 'react'
 import { Container } from './styles';
 import bunny from '../../assets/bunny.png'
 
-const SelectVideo = () => {
+const SelectVideo = ({name, author, views}) => {
   return (
     <Container>
+      
         <img src={bunny} className='left'/>
         <div className='right'>
-          <h3>Titulo de duas linha pelo menos</h3>
-          <p>Nome autor</p>
-          <p>NUm visualizações</p>
+          <h3>{name}</h3>
+          <p>{author}</p>
+          <p>{views}</p>
           <p>novo</p>
         </div>
     </Container>

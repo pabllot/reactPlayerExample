@@ -2,22 +2,22 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width: 310px;
-height: 100px;
-background-color: blue;
+height: 94px;
+background-color: #1f1c1c39;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
 
 .left {
-    background-color: red;
     width: 130px;
     height: 70px;
+    border-radius: 8px;
 }
 
 .right {
-    background-color: yellow;
     width: 145px;
     height: 70px;
+    color: white;
 }
 
 h3 {
