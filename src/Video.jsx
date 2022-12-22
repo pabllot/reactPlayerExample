@@ -62,17 +62,22 @@ function Video() {
       }
    }
 
+   //mudar velocidade do video
    const changeSpeed = () => {
     let newSpeed = vidRef.current.playbackRate + 0.25
     if (newSpeed > 2) newSpeed = 0.25
     vidRef.current.playbackRate = newSpeed
     setSpeed(newSpeed)
    }
-  
+
+   // para mostrar a barrinha carregando conforme o tempo passa  
+   const width = 100 / parseInt(duration?.replace(':', '')) * parseInt(currentTime?.replace(':', ''))
+
 
   return (
     <div  className="video-big-container">
       <div ref={fullScreenRef} className={`video-container paused  ${isTheaterMode ? "theater" : ""}`}>
+        <div className='progress' style={{width: `${width}%`}}></div>
         <div className='video-controls-container'>
           <div className="timeline-container"></div>
           <div className="controls">
