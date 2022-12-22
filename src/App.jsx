@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import video from './assets/example.mp4'
 import { IoMdPlay, IoMdPause, MdVolumeOff, BiFullscreen, BiExitFullscreen, CgScreenWide, CgScreen, GoUnmute} from './assets/reactIconsImport';
 import './App.css'
@@ -36,7 +36,20 @@ function App() {
     setIsVideoPaused(prev => !prev)
     }
 
+ const volumeChange = () => {
+    vidRef.current.volume = 100
+  }
+
+ const  handleInput= (e)=>{
+    if(e.target.value < 0.02) vidRef.current.volume = 0;
+    else if(e.target.value > 0 && e.target.value < 0.6) vidRef.current.volume = 0.5
+    else vidRef.current.volume = 1
+  }
   
+  useEffect(()=>{
+    
+    console.log(volume)
+  },[volume])
 
   return (
     <div  className="App">
@@ -47,13 +60,13 @@ function App() {
             <button onClick={togglePlay}>{!isVideoPaused ? <IoMdPause /> : <IoMdPlay />}</button>
             <div className='volume-container'>
               <button onClick={toggleMute}>{isMute ? <GoUnmute /> : <MdVolumeOff />}</button>
-              <input ref={volumeRef} onInput={(e) => setVolume(e.target.value)} className='volume-slider' type='range' min='0' max='1' step='any' defaultValue='1'></input>
+              <input ref={volumeRef} onInput={(e) => handleInput(e)} className='volume-slider' type='range' min='0' max='1' step='any' defaultValue='1'></input>
             </div>
             <button onClick={toggleTheaterMode}>{isTheaterMode ? <CgScreenWide/> : <CgScreen />}</button>
             <button onClick={toggleFullScreen}>{ isFullScreen ? <BiFullscreen /> : <BiExitFullscreen/>}</button>
           </div>
         </div>
-        <video ref={vidRef}  src={video} loop type='video/mp4'></video>
+        <video ref={vidRef} onVolumeChange={(e) => setVolume(e.target.value)} src={video} loop type='video/mp4'></video>
       </div>
     </div>
   )
