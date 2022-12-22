@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { IoMdPlay, IoMdPause, MdVolumeOff, BiFullscreen, BiExitFullscreen, CgScreenWide, CgScreen, GoUnmute} from '../../assets/reactIconsImport';
 import { Container } from './styles';
-import penaltis from '../../assets/penaltis.mp4'
+import penaltis from '../../assets/liverpool.mp4'
 
 const Video = ({isTheaterMode, setIsTheaterMode}) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true)

@@ -13,7 +13,7 @@ const Sidebar = () => {
           <button className='button'>Soccer</button>
           <button className='button'>Dunno</button>
         </div>
-       {vids.slice(0, 5).map(item=><SelectVideo key={item.id} name={item.name} author={item.author} views={item.views}  />       
+       {vids.slice(0, 5).map(item=><SelectVideo key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
        )}
  
       </div>

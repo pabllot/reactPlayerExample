@@ -1,13 +1,13 @@
 { 
         "vids": [
-    {"id": 1, "name": "Exemplo de titulo de video", "author": "author", "views": "434"},
-    {"id": 2, "name":  "Exemplo de titulo de video", "author": "author", "views": "434"},
-    {"id": 3, "name":  "Exemplo de titulo de video", "author": "author", "views": "434"},
-    {"id": 4, "name":  "Exemplo de titulo de video", "author": "author", "views": "434"},
-    {"id": 5, "name":  "Exemplo de titulo de video", "author": "author", "views": "434"},
-    {"id": 6, "name":  "Exemplo de titulo de video", "author": "author", "views": "434"},
-    {"id": 7, "name":  "Exemplo de titulo de video", "author": "author", "views": "434"},
-    {"id": 8, "name":  "Exemplo de titulo de video", "author": "author", "views": "434"},
-    {"id": 9, "name":  "Exemplo de titulo de video", "author": "author", "views": "434"}
+    {"id": 1, "name": "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/bunny.png"},
+    {"id": 2, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png"},
+    {"id": 3, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/neymar1.png"},
+    {"id": 4, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png"},
+    {"id": 5, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/neymar1.png"},
+    {"id": 6, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png"},
+    {"id": 7, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/neymar1.png"},
+    {"id": 8, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png"},
+    {"id": 9, "name":  "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/liverpool.png"}
   ]
 }

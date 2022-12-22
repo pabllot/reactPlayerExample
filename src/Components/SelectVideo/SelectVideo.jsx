@@ -2,11 +2,11 @@ import React from 'react'
 import { Container } from './styles';
 import bunny from '../../assets/bunny.png'
 
-const SelectVideo = ({name, author, views}) => {
+const SelectVideo = ({name, author, views, img}) => {
   return (
     <Container>
       
-        <img src={bunny} className='left'/>
+        <img src={img} className='left'/>
         <div className='right'>
           <h3>{name}</h3>
           <p>{author}</p>
