@@ -7,6 +7,12 @@ background-color: #64626239;
 display: flex;
 align-items: center;
 justify-content: space-evenly;
+cursor: pointer;
+
+&:hover {
+background-color: #a2a0a039;
+
+}
 
 .left {
     width: 130px;

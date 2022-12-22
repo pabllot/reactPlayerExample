@@ -4,9 +4,9 @@ import { Container } from './styles';
 import {vids} from '../data.json'
 import { MdOtherHouses } from 'react-icons/md';
 
-const Sidebar = () => {
+const Sidebar = ({setChosenVideo, chosenVideo}) => {
   const [filter, setFilter] = useState('kids');
-  const [filteredVids, setFilteredVids] = useState([])
+  const [filteredVids, setFilteredVids] = useState([]);
 
   useEffect(()=>{
     setFilteredVids([])
@@ -24,7 +24,7 @@ const Sidebar = () => {
           <button className='button' onClick={()=>setFilter('dogs')}>dogs</button>
           <button className='button' onClick={()=>setFilter('soccer')}>soccer</button>
         </div>
-       {filteredVids.slice(0, 5).map(item=><SelectVideo key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
+       {filteredVids.slice(0, 5).map(item=><SelectVideo setChosenVideo={setChosenVideo} chosenVideo={chosenVideo} url={item.url} key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
        )}
  
       </div>

@@ -1,11 +1,10 @@
 import React from 'react'
 import { Container } from './styles';
 
-const SelectVideo = ({name, author, views, img}) => {
+const SelectVideo = ({name, author, views, img, url, chosenVideo, setChosenVideo}) => {
   return (
-    <Container>
-      
-        <img src={img} className='left'/>
+    <Container onClick={()=>setChosenVideo(url)}>
+              <img src={img} className='left'/>
         <div className='right'>
           <h3>{name}</h3>
           <p>{author}</p>
@@ -14,6 +13,8 @@ const SelectVideo = ({name, author, views, img}) => {
         </div>
     </Container>
   )
+
+  
 }
 
 export default SelectVideo

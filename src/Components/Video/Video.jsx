@@ -1,23 +1,23 @@
 import { useState, useRef, useEffect } from 'react'
 import { IoMdPlay, IoMdPause, MdVolumeOff, BiFullscreen, BiExitFullscreen, CgScreenWide, CgScreen, GoUnmute} from '../../assets/reactIconsImport';
 import { Container } from './styles';
+import { vids } from '../data.json'
 import penaltis from '../../assets/vids/dogs2.mp4'
 
-const Video = ({isTheaterMode, setIsTheaterMode}) => {
+const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true)
   const [isFullScreen, setIsFullScreen] = useState(true)
   const [isMute, setIsMute] = useState(true)
   const [duration, setDuration] = useState(null)
   const [currentTime, setCurrentTime] = useState('0:00')
   const [speed, setSpeed] = useState(1)
-
-
-
-
   const vidRef = useRef(null)
   const fullScreenRef = useRef(null)
   const volumeRef = useRef(null)
-
+  const [isPlaying, setIsPlaying] = useState(penaltis)
+  
+console.log(chosenVideo)
+  
   const toggleTheaterMode = () =>  setIsTheaterMode(prev => !prev);
 
   const toggleMute = () => {
@@ -100,7 +100,7 @@ const Video = ({isTheaterMode, setIsTheaterMode}) => {
           </div>
         </div>
         <video ref={vidRef} onTimeUpdate={()=>setCurrentTime(formatDuration(vidRef?.current?.currentTime))} onLoadedMetadata={()=>setDuration(formatDuration(vidRef?.current?.duration))} 
-        src={penaltis} loop type='video/mp4'></video>
+        src={chosenVideo} loop type='video/mp4'></video>
       </div>
     </Container>
   )
