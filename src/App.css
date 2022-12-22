@@ -4,11 +4,19 @@
 
 body {
   margin: 0;
+  background: rgb(37, 37, 37);
+  font-family: 'Roboto', sans-serif;
+
 }
 
+.video-big-container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
 .video-container {
   position: relative;
-  margin-top: 20px;
   width: 90%;
   max-width: 1000px;
   display: flex;
@@ -45,6 +53,8 @@ video {
   opacity: 0;
   transition: opacity 150ms ease-in-out;
   background-color: rgba(38, 37, 37, 0.438);
+  border-top:4px solid red;
+
 }
 
 .video-container:hover .video-controls-container,
@@ -90,6 +100,7 @@ video {
   transform-origin: left;
   transform: scaleX(0);
   transition: width 150ms ease-in-out, tranform 150ms ease-in-out;
+  margin-left: 1rem;
 }
 
 .volume-container:hover .volume-slider{
@@ -104,3 +115,8 @@ video {
   flex-grow: 1;
 }
 
+.wider-btn {
+  width: 50px;
+  margin-right: 10px;
+  font-weight: 500;
+}
