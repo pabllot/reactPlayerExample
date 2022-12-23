@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import SelectVideo from '../SelectVideo/SelectVideo';
 import { Container } from './styles';
-import {vids} from '../data.json'
-import { MdOtherHouses } from 'react-icons/md';
+import { vids } from '../Database/Data'
 
 const Sidebar = ({setChosenVideo, chosenVideo}) => {
   const [filter, setFilter] = useState('kids');
