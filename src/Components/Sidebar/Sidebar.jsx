@@ -10,7 +10,7 @@ const Sidebar = ({setChosenVideo, chosenVideo}) => {
   useEffect(()=>{
     setFilteredVids([])
       for(let i = 0; i < vids.length; i++){
-        if(vids[i].gender === filter) setFilteredVids(prev => [...prev, vids[i]])  
+        if(vids[i].genre === filter) setFilteredVids(prev => [...prev, vids[i]])  
     }
   },[filter])
 

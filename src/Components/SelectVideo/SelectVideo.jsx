@@ -8,8 +8,7 @@ const SelectVideo = ({name, author, views, img, url, chosenVideo, setChosenVideo
         <div className='right'>
           <h3>{name}</h3>
           <p>{author}</p>
-          <p>{views}</p>
-          <p>novo</p>
+          <p>{views} views</p>
         </div>
     </Container>
   )
