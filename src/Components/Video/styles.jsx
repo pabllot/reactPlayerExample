@@ -13,8 +13,9 @@ export const Container = styled.div`
   justify-content: center;
   margin-inline: auto;
   background-color: black;
-  border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow: hidden;
 
 }
 
@@ -131,6 +132,9 @@ video {
     margin-top: 100px;
     .video-container {
       height: 200px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0;
+
       
     }
     
@@ -139,15 +143,28 @@ video {
     height: 200px;
     width: 350px;
     margin-top: 100px;
+    .video-container {
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0;
+
+
+    }
+
    
   }
   @media (max-width: 350px) {
     height: 200px;
     width: 300px;
+    
     .video-container {
-  height: 200px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0;
+
+     height: 200px;
+
 }}
   @media (max-width: 1024px) {
+
     .video-container {
       width: 680px;
 }}
