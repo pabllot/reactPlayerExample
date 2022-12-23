@@ -34,11 +34,11 @@ import kids2img from '../../assets/kids2.png'
 import kids3img from '../../assets/kids3.png'
 import kids4img from '../../assets/kids4.png'
 import kids5img from '../../assets/kids5.png'
-import socce1img from '../../assets/liverpool.png'
-import socce2img from '../../assets/liverpool.png'
-import socce3img from '../../assets/liverpool.png'
-import socce4img from '../../assets/liverpool.png'
-import socce5img from '../../assets/liverpool.png'
+import socce1img from '../../assets/soccer1.png'
+import socce2img from '../../assets/soccer2.png'
+import socce3img from '../../assets/soccer3.png'
+import socce4img from '../../assets/soccer4.png'
+import socce5img from '../../assets/soccer5.png'
 
 
 
