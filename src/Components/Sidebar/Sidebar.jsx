@@ -18,10 +18,10 @@ const Sidebar = ({setChosenVideo, chosenVideo}) => {
     <Container>
       <div className='sidebar'>
         <div className='filter'> 
-          <button className='button' onClick={()=>setFilter('kids')}>kids</button>
-          <button className='button' onClick={()=>setFilter('cats')}>cats</button>
-          <button className='button' onClick={()=>setFilter('dogs')}>dogs</button>
-          <button className='button' onClick={()=>setFilter('soccer')}>soccer</button>
+          <button className='button' onClick={()=>setFilter('kids')}>Kids</button>
+          <button className='button' onClick={()=>setFilter('cats')}>Cats</button>
+          <button className='button' onClick={()=>setFilter('dogs')}>Dogs</button>
+          <button className='button' onClick={()=>setFilter('soccer')}>Soccer</button>
         </div>
        {filteredVids.slice(0, 5).map(item=><SelectVideo setChosenVideo={setChosenVideo} chosenVideo={chosenVideo} url={item.url} key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
        )}

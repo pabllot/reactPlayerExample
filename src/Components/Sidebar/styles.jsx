@@ -31,7 +31,7 @@ border-bottom-right-radius: 10px;
 button {
   background-color: white;
   border-radius: 50px;
-  color: #000000;
+  color: #000000df;
   cursor: pointer;
   border: none;
   outline: none;
@@ -40,23 +40,21 @@ button {
   font-size: 14px;
   font-weight: 700;
   outline-style: none;
+  width: 60px;
 
   
 }
 
-.button:hover,
-.button:focus {
-  opacity: 0.6;
-}
 
 .button:focus {
-  box-shadow: 0 0 0 4px #2c2d2e9a;
+  background-color: #090909cb;
+  color: white;
+  border: 2px solid white;
 }
 
 .button:active {
-  background-color: #a0c7e4;
-  box-shadow: none;
-  color: #000000;
+  background-color: #000000b1;
+  color: #ffffff;
 }
 
 @media (max-width: 1024px) {
