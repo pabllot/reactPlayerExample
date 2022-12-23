@@ -6,6 +6,8 @@ align-items: center;
 height: 500px;
 width: 340px;
 background-color: #121212f4;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
 
 
 .sidebar {

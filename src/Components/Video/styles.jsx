@@ -4,7 +4,7 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-
+  
 .video-container {
   position: relative;
   width: 850px;
@@ -13,6 +13,9 @@ export const Container = styled.div`
   justify-content: center;
   margin-inline: auto;
   background-color: black;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
 }
 
 .video-container.theater, 
