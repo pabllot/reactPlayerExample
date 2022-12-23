@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { IoMdPlay, IoMdPause, MdVolumeOff, BiFullscreen, BiExitFullscreen, CgScreenWide, CgScreen, GoUnmute} from '../../assets/reactIconsImport';
 import { Container } from './styles';
-import { vids } from '../data.json'
 
 const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true)
@@ -13,8 +12,6 @@ const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
   const vidRef = useRef(null)
   const fullScreenRef = useRef(null)
   const volumeRef = useRef(null)
-
-  const mapped = vids.map(item=> item.id)
    
   const toggleTheaterMode = () =>  setIsTheaterMode(prev => !prev);
 
