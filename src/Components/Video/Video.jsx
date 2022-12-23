@@ -20,6 +20,11 @@ const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
    
   const toggleTheaterMode = () =>  setIsTheaterMode(prev => !prev);
 
+  const togglePlay = () => {
+    isVideoPaused ? vidRef.current.play() : vidRef.current.pause();
+    setIsVideoPaused(prev => !prev)
+    }
+
   const toggleMute = () => {
     setIsMute(prev => !prev)
     isMute ? vidRef.current.volume = 0 : vidRef.current.volume = 1;
@@ -27,26 +32,20 @@ const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
     }
 
 
- const toggleFullScreen = () => {
+  const toggleFullScreen = () => {
     setIsFullScreen(prev => !prev)    
     if (!isFullScreen)document.exitFullscreen()
     else fullScreenRef.current.requestFullscreen()
     }
 
-    // ao trocar de vídeo quando o video ta rodando, seta o botão p play
-    useEffect(() => {
-      setIsVideoPaused(true)
-    },[chosenVideo])
-
- const togglePlay = () => {
-    isVideoPaused ? vidRef.current.play() : vidRef.current.pause();
-    setIsVideoPaused(prev => !prev)
-    }
+  // ao trocar de vídeo quando o video ta rodando, seta o botão p play
+  useEffect(() => {
+    setIsVideoPaused(true)
+  },[chosenVideo])
 
 
-
- // ajustar volume de acordo com a barrinha
- const  handleRange= (e)=>{
+  // ajustar volume de acordo com a barrinha
+  const  handleRange= (e)=>{
     if(e.target.value < 0.01) vidRef.current.volume = 0, setIsMute(false);
     else if(e.target.value > 0.01 && e.target.value < 0.3) vidRef.current.volume = 0.2, setIsMute(true)
     else if(e.target.value > 0.3 && e.target.value < 0.7) vidRef.current.volume = 0.6, setIsMute(true)
@@ -58,6 +57,7 @@ const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
   const startWithZero = new Intl.NumberFormat(undefined, {
     minimumIntegerDigits: 2,
     })
+    
 
   // formatando a duração de vídeo, pq recebe milisegundos e nao em formato de hora 
   const formatDuration = (time) => {
@@ -72,15 +72,15 @@ const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
    }
 
    //mudar velocidade do video
-   const changeSpeed = () => {
+  const changeSpeed = () => {
     let newSpeed = vidRef.current.playbackRate + 0.25
     if (newSpeed > 2) newSpeed = 0.25
     vidRef.current.playbackRate = newSpeed
     setSpeed(newSpeed)
-   }
+    }
 
    // para mostrar a barrinha carregando conforme o tempo passa  
-   const width = 100 / parseInt(duration?.replace(':', '')) * parseInt(currentTime?.replace(':', ''))
+  const width = 100 / parseInt(duration?.replace(':', '')) * parseInt(currentTime?.replace(':', ''))
 
   return (
     <Container>

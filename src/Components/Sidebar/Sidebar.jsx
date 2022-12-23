@@ -3,7 +3,7 @@ import SelectVideo from '../SelectVideo/SelectVideo';
 import { Container } from './styles';
 import { vids } from '../Database/Data'
 
-const Sidebar = ({setChosenVideo, chosenVideo}) => {
+const Sidebar = ({setChosenVideo }) => {
   const [filter, setFilter] = useState('kids');
   const [filteredVids, setFilteredVids] = useState([]);
 
@@ -25,7 +25,7 @@ const Sidebar = ({setChosenVideo, chosenVideo}) => {
           <button className='button' onClick={()=>setFilter('dogs')}>Dogs</button>
           <button className='button' onClick={()=>setFilter('soccer')}>Soccer</button>
         </div>
-       {filteredVids.slice(0, 5).map(item=><SelectVideo setChosenVideo={setChosenVideo} chosenVideo={chosenVideo} url={item.url} key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
+       {filteredVids.slice(0, 5).map(item=><SelectVideo setChosenVideo={setChosenVideo} url={item.url} key={item.id} name={item.name} author={item.author} views={item.views} img={item.img} />       
        )}
  
       </div>

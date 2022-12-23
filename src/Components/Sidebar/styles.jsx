@@ -11,13 +11,10 @@ border-bottom-right-radius: 10px;
 
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-inline: auto;
-
-
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: auto;    
 }
 
 .filter {
@@ -41,8 +38,6 @@ button {
   font-weight: 700;
   outline-style: none;
   width: 60px;
-
-  
 }
 
 
@@ -58,32 +53,27 @@ button {
 }
 
 @media (max-width: 1024px) {
-width: 320px;
-border-top-right-radius: 10px;
-border-bottom-left-radius: 0px;
-
+  width: 320px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
 }
 
 @media (max-width: 768px) {
   width: 420px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
+}
 
-
-  }
 @media (max-width: 620px) {
   width: 350px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
+}
 
-
-  }
-  @media (max-width: 350px) {
+@media (max-width: 350px) {
   width: 300px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 10px;
-
-
 }
 
 

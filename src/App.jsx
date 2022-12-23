@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className='big-wrapper'>
         <Video isTheaterMode={isTheaterMode} setIsTheaterMode={setIsTheaterMode} chosenVideo={chosenVideo} setChosenVideo={setChosenVideo} />
-         {!isTheaterMode && <Sidebar chosenVideo={chosenVideo} setChosenVideo={setChosenVideo} /> }
+         {!isTheaterMode && <Sidebar setChosenVideo={setChosenVideo} /> }
     </div>
   )
 }
