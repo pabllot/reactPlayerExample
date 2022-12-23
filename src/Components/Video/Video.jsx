@@ -1,6 +1,11 @@
 import { useState, useRef, useEffect } from 'react'
-import { IoMdPlay, IoMdPause, MdVolumeOff, BiFullscreen, BiExitFullscreen, CgScreenWide, CgScreen, GoUnmute} from '../../assets/reactIconsImport';
 import { Container } from './styles';
+
+import { IoMdPlay, IoMdPause } from 'react-icons/io'
+import { MdVolumeOff } from 'react-icons/md'
+import { BiFullscreen, BiExitFullscreen } from 'react-icons/bi'
+import { CgScreenWide, CgScreen } from 'react-icons/cg'
+import { GoUnmute } from 'react-icons/go'
 
 const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
   const [isVideoPaused, setIsVideoPaused] = useState(true)

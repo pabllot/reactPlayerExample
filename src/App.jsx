@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Sidebar from './Components/Sidebar/Sidebar'
 import Video from './Components/Video/Video'
-import './App.css'
 import kids1 from './assets/vids/kids1.mp4'
+import './App.css'
 
 
 const App = () => {

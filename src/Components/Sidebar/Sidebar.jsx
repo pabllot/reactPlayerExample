@@ -7,6 +7,8 @@ const Sidebar = ({setChosenVideo, chosenVideo}) => {
   const [filter, setFilter] = useState('kids');
   const [filteredVids, setFilteredVids] = useState([]);
 
+
+  // vai filtrar todos os videos do db e retornar somente os que tem o mesmo genero, 
   useEffect(()=>{
     setFilteredVids([])
       for(let i = 0; i < vids.length; i++){
