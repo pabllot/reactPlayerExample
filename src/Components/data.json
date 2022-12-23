@@ -1,3 +1,5 @@
+
+
 { 
         "vids": [
     {"id": 1, "name": "Exemplo de titulo de video", "author": "author", "views": "434", "img": "src/assets/kids1.png", "gender": "kids", "url": "src/assets/vids/kids1.mp4"},

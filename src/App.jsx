@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import Sidebar from './Components/Sidebar/Sidebar'
 import Video from './Components/Video/Video'
 import './App.css'
+import kids1 from './assets/vids/kids1.mp4'
 
 
 const App = () => {
   const [isTheaterMode, setIsTheaterMode] = useState(false);
-  const [chosenVideo, setChosenVideo] = useState('src/assets/vids/kids1.mp4');
+  const [chosenVideo, setChosenVideo] = useState(kids1);
 
 
   return (
