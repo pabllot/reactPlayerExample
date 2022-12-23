@@ -65,7 +65,11 @@ width: 320px;
   width: 420px;
 
   }
-  @media (max-width: 320px) {
+@media (max-width: 620px) {
+  width: 350px;
+
+  }
+  @media (max-width: 350px) {
   width: 300px;
 
 }

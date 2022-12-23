@@ -127,23 +127,26 @@ video {
     width: 420px;
     margin-top: 100px;
     .video-container {
-      width: 420px;
       height: 200px;
       
     }
     
   }
-  @media (max-width: 320px) {
+  @media (max-width: 620px) {
+    height: 200px;
+    width: 350px;
+    margin-top: 100px;
+   
+  }
+  @media (max-width: 350px) {
     height: 200px;
     width: 300px;
     .video-container {
-  width: 340px;
   height: 200px;
 }}
   @media (max-width: 1024px) {
     .video-container {
       width: 680px;
-
 }}
 
 `
