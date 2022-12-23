@@ -124,20 +124,26 @@ video {
   
   @media (max-width: 768px) {
     height: 200px;
+    width: 420px;
+    margin-top: 100px;
     .video-container {
-      width: 480px;
+      width: 420px;
       height: 200px;
       
     }
     
   }
-  @media (max-width: 420px) {
+  @media (max-width: 320px) {
     height: 200px;
+    width: 300px;
     .video-container {
   width: 340px;
   height: 200px;
+}}
+  @media (max-width: 1024px) {
+    .video-container {
+      width: 680px;
 
-}
+}}
 
-  }
 `

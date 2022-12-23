@@ -57,18 +57,18 @@ button {
   color: #000000;
 }
 
+@media (max-width: 1024px) {
+width: 320px;
+}
 
 @media (max-width: 768px) {
-    .sidebar {
-  width: 280px;
+  width: 420px;
+
+  }
+  @media (max-width: 320px) {
+  width: 300px;
 
 }
 
-  }
-  @media (max-width: 420px) {
-    .sidebar {
-  width: 340px;
-
-}}
 
 `
