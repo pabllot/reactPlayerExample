@@ -61,8 +61,8 @@ button {
 
 @media (max-width: 1024px) {
 width: 320px;
-border-top-right-radius: 0px;
-border-bottom-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 0px;
 
 }
 
