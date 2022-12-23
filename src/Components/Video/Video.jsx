@@ -18,20 +18,23 @@ const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
   const fullScreenRef = useRef(null)
   const volumeRef = useRef(null)
    
+  // modo teatro
   const toggleTheaterMode = () =>  setIsTheaterMode(prev => !prev);
 
+  //dar play no vídeo
   const togglePlay = () => {
     isVideoPaused ? vidRef.current.play() : vidRef.current.pause();
     setIsVideoPaused(prev => !prev)
     }
 
+  //mutar vídeo
   const toggleMute = () => {
     setIsMute(prev => !prev)
     isMute ? vidRef.current.volume = 0 : vidRef.current.volume = 1;
     isMute ? volumeRef.current.value = 0 : volumeRef.current.value = 1
     }
 
-
+  // tela cheia
   const toggleFullScreen = () => {
     setIsFullScreen(prev => !prev)    
     if (!isFullScreen)document.exitFullscreen()
