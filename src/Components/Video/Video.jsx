@@ -44,7 +44,7 @@ const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
  const  handleRange= (e)=>{
     if(e.target.value < 0.01) vidRef.current.volume = 0, setIsMute(false);
     else if(e.target.value > 0.01 && e.target.value < 0.3) vidRef.current.volume = 0.2, setIsMute(true)
-    else if(e.target.value > 0.3 && e.target.value < 0.6) vidRef.current.volume = 0.7, setIsMute(true)
+    else if(e.target.value > 0.3 && e.target.value < 0.6) vidRef.current.volume = 0.6, setIsMute(true)
     else vidRef.current.volume = 1
     }
 
