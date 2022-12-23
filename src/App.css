@@ -5,6 +5,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: rgba(27, 27, 27, 0.866);
 
 }
 
@@ -15,4 +16,18 @@ body {
   margin: 0;
   height: 100vh;
 }
+
+@media (max-width: 768px) {
+  .big-wrapper{
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .big-wrapper{
+  
+  flex-direction: column;
+
+}}
 

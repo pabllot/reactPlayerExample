@@ -15,9 +15,7 @@ const Video = ({isTheaterMode, setIsTheaterMode, chosenVideo}) => {
   const fullScreenRef = useRef(null)
   const volumeRef = useRef(null)
   const [isPlaying, setIsPlaying] = useState(penaltis)
-  
-console.log(chosenVideo)
-  
+   
   const toggleTheaterMode = () =>  setIsTheaterMode(prev => !prev);
 
   const toggleMute = () => {
@@ -33,10 +31,17 @@ console.log(chosenVideo)
     else fullScreenRef.current.requestFullscreen()
     }
 
+    // ao trocar de vídeo quando o video ta rodando, seta o botão p play
+    useEffect(() => {
+      setIsVideoPaused(true)
+    },[chosenVideo])
+
  const togglePlay = () => {
     isVideoPaused ? vidRef.current.play() : vidRef.current.pause();
     setIsVideoPaused(prev => !prev)
     }
+
+
 
  // ajustar volume de acordo com a barrinha
  const  handleRange= (e)=>{

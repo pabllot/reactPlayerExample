@@ -120,15 +120,19 @@ video {
   z-index: 999;
   bottom: 38px;
   left: 0;}
+
+  
   @media (max-width: 768px) {
+    height: 200px;
     .video-container {
-  width: 480px;
-  height: 300px;
-
-}
-
+      width: 480px;
+      height: 200px;
+      
+    }
+    
   }
   @media (max-width: 420px) {
+    height: 200px;
     .video-container {
   width: 340px;
   height: 200px;

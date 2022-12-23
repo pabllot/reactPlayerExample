@@ -4,14 +4,19 @@ export const Container = styled.div`
 display: flex;
 align-items: center;
 height: 500px;
+width: 340px;
+background-color: #1c1c1cc3;
 
 
 .sidebar {
-    background: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-inline: auto;
+    background-color: #1a1919b7;
+
+
+    
 }
 
 .filter {
@@ -19,7 +24,7 @@ height: 500px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #64626239;
+  background-color: #1c1c1c9d;
 }
 
 button {
@@ -55,17 +60,15 @@ button {
 
 
 @media (max-width: 768px) {
-    .video-container {
-  width: 480px;
-  height: 300px;
+    .sidebar {
+  width: 280px;
 
 }
 
   }
   @media (max-width: 420px) {
-    .video-container {
+    .sidebar {
   width: 340px;
-  height: 200px;
 
 }}
 
