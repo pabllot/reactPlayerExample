@@ -44,15 +44,14 @@ button {
 
 
 .button:focus {
-  background-color: #090909cb;
-  color: white;
-  border: 2px solid white;
+  background-color: #898181;
 }
 
 .button:active {
-  background-color: #000000b1;
+  background-color: #6a6969af;
   color: #ffffff;
 }
+
 
 @media (max-width: 1024px) {
   width: 320px;
